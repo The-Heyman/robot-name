@@ -1,9 +1,18 @@
 import string
 import random
+
+
 class Robot:
-    def __init__(self, name=None, reset= None):
-        self.name = name
-        self.reset = reset
+
+    name = "NG453"
+    
+    def __init__(self):
+        self.robot_name()
+        
+        
+    def reset(self):
+        del self.name
+        return self.name
         
     
     def robot_name(self):
@@ -14,7 +23,6 @@ class Robot:
         self.name = "".join((random.sample(alpha,2)) + random.sample(num,3))
         if self.name not in pool:
             pool.add(self.name)
-            
-        return self.name
-#bot_D = Robot()
-#print(bot_D.robot_name())
+            return self.name
+
+
